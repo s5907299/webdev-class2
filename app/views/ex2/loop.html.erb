@@ -1,14 +1,19 @@
 <h1>Main#loop</h1><br>
 
-#a is <%=@a%><br>
-#b is <%=@b%><br><br>
+#a is <%=@a.to_i%><br>
+#b is <%=@b.to_i%><br><br>
 
-<%= @a.class %><br>
-<%= @c %><br>
-
+<%if @a.to_i==0 && @a!='0'%>
+Input A with Integer
+<%elsif @b.to_i==0 && @b!='0'%>
+Input B with Integer
+<%else%>
 <%  x=@a %>
 <%  y=@b %>
 <%  for i in x..y do %>
 <%=   i %>
 <%  end %>
+<%end%>
+
+
 
